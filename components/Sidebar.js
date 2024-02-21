@@ -13,7 +13,7 @@ export default function Sidebar (){
     { title: "Trash", src: "/trash.png" },
     { title: "Files ", src: "/Folder.png",  },
     { title: "More ", src: "/more.png",  },
-    { title: "Help & Support", src: "/Setting.png", gap: true },
+    { title: "Help & Support", src: "/Settings.png", gap: true },
   ];
 
   return (
@@ -71,7 +71,7 @@ export default function Sidebar (){
                   src={inboxOpen ? "/upload.png" : "/down.png"}
                   width={10}
                   height={10}
-                  className="w-3 h-3"
+                  className={`${!open && "hidden"} w-3 h-3`}
                 />
                 
               </div>
