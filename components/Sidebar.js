@@ -13,7 +13,7 @@ export default function Sidebar (){
     { title: "Trash", src: "/trash.png" },
     { title: "Files ", src: "/Folder.png",  },
     { title: "More ", src: "/more.png",  },
-    { title: "Help & Support", src: "/Settings.png", gap: true },
+    { title: "Help & Support", src: "/Setting.png", gap: true },
   ];
 
   return (
