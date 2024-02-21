@@ -3,6 +3,7 @@ import { useState } from "react";
 import Dashboard from "./Dashboard";
 export default function Sidebar (){
   const [open, setOpen] = useState(true);
+  const [inboxOpen, setInboxOpen] = useState(false); 
   const Menus = [
     
     { title: "Dashboard", src: "/dashboard.svg" },
@@ -47,15 +48,41 @@ export default function Sidebar (){
           </h1>
         </div>
         <ul className="pt-5">
-         <li className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4  
-              ${open ? "mt-9" : "mt-2"}`}>
-          <Image src={"/chat.png"} width={20} height={20}  className="stroke-white fill-white" />
-          <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <li onClick={() => setInboxOpen(!inboxOpen)}
+              className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4  
+              ${open ? "mt-9" : "mt-2"}`}
+            >
+              <Image
+                src={"/chat.png"}
+                width={20}
+                height={20}
+                className="stroke-white fill-white"
+              />
+              <span
+                className={`${!open && "hidden"} origin-left duration-200`}
+              >
                 Inbox
               </span>
-              <Image src={"/down.png"} width={10} height={10} className="w-3 h-3" />
-         </li>
-        </ul>
+              <div
+                className="cursor-pointer"
+               
+              >
+                <Image
+                  src={inboxOpen ? "/upload.png" : "/down.png"}
+                  width={10}
+                  height={10}
+                  className="w-3 h-3"
+                />
+                
+              </div>
+            </li>
+            {inboxOpen && (
+                  <ul>
+                    <li className="text-xs text-slate-300/60">James23@gmail.com</li>
+                    <li className="text-xs text-slate-300/60">Junaid123@gmail.com</li>
+                  </ul>
+                )}
+          </ul>
         <ul className="">
           {Menus.map((Menu, index) => (
             <li
