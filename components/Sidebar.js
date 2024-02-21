@@ -78,7 +78,7 @@ export default function Sidebar (){
             </li>
             {inboxOpen && (
                   <ul>
-                    <li className="text-xs text-slate-300/60">James23@gmail.com</li>
+                    <li className="text-xs text-slate-300/60">James89@gmail.com</li>
                     <li className="text-xs text-slate-300/60">Junaid123@gmail.com</li>
                   </ul>
                 )}
