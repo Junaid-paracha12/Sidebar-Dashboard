@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
+import Navbar from './Navbar'
 
 export default function Dashboard() {
   return (
     <>
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+    <Navbar />
+    
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-5'>
        <div className='flex flex-col gap-6'>
         <div className='relative'>
             <Image src={"/pic1.jpg"} width={300} height={30} className='h-[35vh] w-full rounded-md object-cover' />
@@ -55,3 +58,5 @@ export default function Dashboard() {
     </>
   )
 }
+
+
